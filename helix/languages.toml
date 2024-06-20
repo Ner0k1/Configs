@@ -1,0 +1,55 @@
+# Rust
+[laguage-server.rust-analyzer.config.check]
+command = "clippy"
+
+# TOML
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+
+# Emmet
+[language-server.emmet-language-server]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "html"
+file-types = ["js", "jsx", "html", "css", "scss", "xml", "less", "sass", "pug"]
+language-servers = ["emmet-language-server", "vscode-html-language-server"]
+language-id = "html"
+scope = "text.html"
+auto-format = true
+
+# Deno
+[[language]]
+name = "typescript"
+shebangs = ["deno"]
+roots = ["deno.json", "deno.jsonc"]
+file-types = ["ts"]
+language-servers = ["deno-lsp"]
+auto-format = true
+
+[[language]]
+name = "tsx"
+shebangs = ["deno"]
+roots = ["deno.json", "deno.jsonc"]
+file-types = ["tsx"]
+language-servers = ["deno-lsp"]
+auto-format = true
+
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+environment = { NO_COLOR = "1" }
+
+[language-server.deno-lsp.config.deno]
+enable = true
+suggest = { completeFunctionCalls = false, imports = {hosts = { "https://deno.land" = true }}}
+inlayHints.parameterNames.enabled = "all"
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled  = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+
+

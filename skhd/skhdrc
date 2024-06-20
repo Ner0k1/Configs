@@ -1,0 +1,39 @@
+# switching window focus
+alt + shift - h : yabai -m window --focus west
+alt + shift - l : yabai -m window --focus east
+
+# change focus between spaces
+alt + shift + cmd - 1 : yabai -m window --space 1
+alt + shift + cmd - 2 : yabai -m window --space 2
+alt + shift + cmd - 3 : yabai -m window --space 3 
+# rearrange current layout
+alt - r : yabai -m space --rotate 270
+alt - y : yabai -m space --mirror y-axis
+alt - x : yabai -m space --mirror x-axis
+
+# change size of windows 
+alt + shift - m : yabai -m window --toggle zoom-fullscreen
+alt + shift - e : yabai -m space --balance
+
+# quick open apps
+ctrl + fn - b : open -na /Applications/Waterfox.app
+ctrl + fn - c : open -na /Applications/WezTerm.app
+ctrl + fn - m : open -na /Applications/Prism\ Launcher.app
+ctrl + fn - o : open -na /Applications/OpenOffice.app
+ctrl + fn - t : open -na /Applications/Telegram.app
+ctrl + fn - w : open -na /Applications/WhatsApp.app
+ctrl + fn - n : open -na /Applications/Obsidian.app
+ctrl + fn - i : open -na ~/Applications/IntelliJ\ IDEA\ Ultimate.app
+
+ctrl + fn - a : open -a "About This Mac"
+ctrl + shift + fn - s : open "x-apple.systempreferences:" 
+
+# switch to stack mode
+ctrl + shift - space : yabai -m space --layout stack
+alt + shift - space : yabai -m space --layout bsp
+
+# move between windows in stack
+alt - h: yabai -m window --focus stack.prev
+alt - l: yabai -m window --focus stack.next
+alt - j: yabai -m window --focus stack.first
+alt - k: yabai -m window --focus stack.last

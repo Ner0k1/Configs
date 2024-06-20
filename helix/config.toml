@@ -1,0 +1,55 @@
+# theme = 'kanagawa' #pop-dark/onedark
+theme = 'gruvbox_dark_soft'
+
+[editor]
+scrolloff = 10
+mouse = true
+middle-click-paste = true
+scroll-lines = 5
+shell = ["sh"]
+line-number = "relative"
+auto-completion = true
+auto-format = true
+completion-timeout = 150
+completion-replace = false
+rulers = [100] 
+bufferline = "multiple"
+color-modes = true
+text-width = 100
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "register"]
+center = ["file-name","read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics","file-type", "selections", "position", "position-percentage"]
+
+[editor.lsp]
+enable = true
+display-messages = true
+auto-signature-help = true
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+# '<' = '>'
+"'" = "'"
+
+[editor.indent-guides]
+render = true
+character ="▏"
+
+
+[editor.soft-wrap]
+enable = true
+
