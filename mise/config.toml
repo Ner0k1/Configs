@@ -2,3 +2,6 @@
 node = "lts"
 java = "21"
 deno = "latest"
+rust = "latest"
+opam = "latest"
+nim = "latest"

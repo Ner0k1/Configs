@@ -15,11 +15,18 @@ set -gx EDITOR hx
 set -gx CDPATH . ~ ~/Documents ~/.config
 
 fish_add_path -g -p $HOME/.cargo/bin
-fish_add_path -g -p $HOME/.local/share/mhse/shims
+fish_add_path -g -p $HOME/.local/share/mise/shims
 fish_add_path -g -a $HOME/.nimble/pkgs2/nimlangserver-1.2.0-95de85fae4485dcd850ada31e200d15671a00c4a/
-fish_add_path -p -g $(brew --prefix)/opt/llvm/bin
+fish_add_path -g -p $(brew --prefix)/opt/llvm/bin
 fish_add_path -g -a /opt/homebrew/opt/grep/libexec/gnubin
 fish_add_path -g -a $HOME/.config/emacs/bin
+
+set nimble_path $HOME/.local/share/mise/installs/nim/2.0.6/nimble/pkgs2
+
+for nim_pkg in (ls $nimble_path)
+    fish_add_path -g -a $nimble_path/$nim_pkg
+end
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     fastfetch

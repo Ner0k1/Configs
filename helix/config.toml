@@ -1,5 +1,5 @@
 # theme = 'kanagawa' #pop-dark/onedark
-theme = 'gruvbox_dark_soft'
+theme = 'snazzy'
 
 [editor]
 scrolloff = 10

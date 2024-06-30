@@ -32,8 +32,10 @@
 
 ;; Line style | font | frame title | theme
 (setq display-line-numbers-type t)
-(setq doom-font "IosevkaTerm Nerd Font:pixelsize=14:weight=regular:slant=normal:width=normal:spacing=0:scalable=true")
+(setq doom-font "JetBrainsMono Nerd Font:pixelsize=12:weight=bold:slant=italic:width=normal:spacing=0:scalable=true")
 (setq frame-title-format "")
+(tool-bar-mode nil)
+(menu-bar-mode t)
 ;;(setq doom-theme 'doom-fairy-floss)
 
 (setq cur-time (nth 2 (decode-time)))
@@ -47,7 +49,6 @@
 (when window-system (set-frame-position (selected-frame) 60 20))
 
 ;; Menu bar option for tiling
-(menu-bar-mode t)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
