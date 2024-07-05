@@ -34,20 +34,29 @@ yabai -m config 							\
 # apps
 yabai -m rule --add app="^IntelliJ IDEA$" space=2
 
+# main/dev
+yabai -m rule --add app="^Emacs$" manage=on space=1
+yabai -m rule --add app="^Wezterm$" manage=on space=1
+yabai -m rule --add app="^Obsidian$" manage=on space=1
+
+
+# social
+yabai -m rule --add app="^Discord$" manage=on space=3
+yabai -m rule --add app="^WhatsApp$" space=3
+yabai -m rule --add app="^Telegram$" space=3
+
+# games
+yabai -m rule --add app="^java$" space=4
+yabai -m rule --add app="^Prism Launcher$" space=4 
+yabai -m rule --add app="^Terraria$" manage=on space=4
+yabai -m rule --add app="^Steam$" manage=on space=4
+yabai -m rule --add app="^tModLoader$" mange=on space=4
+
+
 # no manage apps
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^TextEdit$" manage=off
-yabai -m rule --add app="^WhatsApp$" space=3
-yabai -m rule --add app="^Prism Launcher$" space=4 
-yabai -m rule --add app="^java$" space=4
-yabai -m rule --add app="^Telegram$" space=3
-yabai -m rule --add app="^Obsidian$" space=1
-yabai -m rule --add app="^Wezterm$" space=1
-yabai -m rule --add app="^Emacs$" manage=on space=1
-yabai -m rule --add app="^Terraria$" manage=on space=4
-yabai -m rule --add app="^Steam$" manage=on space=4
-yabai -m rule --add app="^tModLoader$" mange=on space=4
 
 echo "yabai conf is loaded"
 

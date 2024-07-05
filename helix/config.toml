@@ -1,12 +1,12 @@
 # theme = 'kanagawa' #pop-dark/onedark
-theme = 'snazzy'
+theme = 'nord-night'
 
 [editor]
 scrolloff = 10
 mouse = true
 middle-click-paste = true
 scroll-lines = 5
-shell = ["sh"]
+shell = ["fish"]
 line-number = "relative"
 auto-completion = true
 auto-format = true
@@ -16,6 +16,9 @@ rulers = [100]
 bufferline = "multiple"
 color-modes = true
 text-width = 100
+true-color = true
+cursorline = true
+
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
