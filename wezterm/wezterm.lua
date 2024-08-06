@@ -30,7 +30,7 @@ config.window_background_opacity = 0.65
 -- font
 config.font = wezterm.font 'JetBrainsMono Nerd Font Propo' --Miracode/Monocraft
 config.bold_brightens_ansi_colors = true
-config.font_size = 14
+config.font_size = 16
 
 config.window_decorations = "RESIZE"
 

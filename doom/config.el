@@ -6,11 +6,11 @@
 
 ;; Line style | font | frame title | theme
 (setq display-line-numbers-type t)
-(setq doom-font "JetBrainsMono Nerd Font:pixelsize=14:weight=regular:slant=italic:width=normal:spacing=0:scalable=true")
+(setq doom-font "JetBrainsMono Nerd Font:pixelsize=15:weight=regular:slant=italic:width=normal:spacing=0:scalable=true")
 (setq frame-title-format "")
 (tool-bar-mode nil)
 (menu-bar-mode t)
-(setq doom-theme 'doom-nord-aurora)
+(setq doom-theme 'doom-moonlight)
 
 ;; (setq cur-time (nth 2 (decode-time)))
 ;; (cond

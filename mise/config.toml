@@ -2,6 +2,7 @@
 node = "lts"
 java = "21"
 deno = "latest"
-rust = "latest"
+rust = "1.79.0"
 opam = "latest"
 nim = "latest"
+python = "latest"

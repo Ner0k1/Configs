@@ -52,4 +52,3 @@ inlayHints.propertyDeclarationTypes.enabled  = true
 inlayHints.functionLikeReturnTypes.enabled = true
 inlayHints.enumMemberValues.enabled = true
 
-
