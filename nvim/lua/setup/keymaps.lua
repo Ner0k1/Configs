@@ -3,6 +3,7 @@ local km = require('vim.keymap')
 local ls = require('vim.lsp.buf')
 local tl = require('telescope')
 local nt = require('global-note')
+local oil = require('oil')
 
 -- Find
 km.set('n', '<leader>ff', builtin.find_files, { desc = "Find File" })
@@ -30,3 +31,6 @@ km.set('n', '<leader>ng', tl.extensions.notify.notify, { desc = "Notify Grep" })
 
 -- ScratchPad
 km.set('n', '<leader>q', nt.toggle_note, {desc = "ScratchPad"})
+
+-- Oil
+km.set('n', "<leader>fo", "<CMD>Oil<CR>", {desc = "Open Parent Dir"})

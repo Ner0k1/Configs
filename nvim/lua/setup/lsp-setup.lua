@@ -2,6 +2,15 @@ local lsp_conf = require 'lspconfig'
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 
+-- Scriptables
+lsp_conf.tsserver.setup {
+    capabilities = capabilities
+}
+
+lsp_conf.pylsp.setup {
+    capabilities = capabilities
+}
+
 lsp_conf.lua_ls.setup {
     on_init = function(client)
         local path = client.workspace_folders[1].name
@@ -27,6 +36,7 @@ lsp_conf.lua_ls.setup {
     capabilities = capabilities
 }
 
+-- Web
 lsp_conf.emmet_language_server.setup {
     filetypes = {
         "css",
@@ -45,21 +55,49 @@ lsp_conf.emmet_language_server.setup {
     capabilities = capabilities
 }
 
--- local capabilities = vim.lsp.protocol.make_client_capabilities()
--- capabilities.textDocument.completion.completionItem.snippetSupport = true
+lsp_conf.svelte.setup {
+    capabilities = capabilities
+}
 
 lsp_conf.cssls.setup {
     capabilities = capabilities,
 }
 
+
+-- System langs
 lsp_conf.nim_langserver.setup {
     capabilities = capabilities
 }
 
-lsp_conf.svelte.setup {
+lsp_conf.zls.setup {
+    capabilities = capabilities,
+}
+
+lsp_conf.clangd.setup {
     capabilities = capabilities
 }
 
-lsp_conf.tsserver.setup {
+lsp_conf.gopls.setup {
+    capabilities = capabilities,
+}
+
+lsp_conf.rust_analyzer.setup {
+    settings = {
+        ['rust-analyzer'] = {
+            diagnostics = {
+                enable = false,
+            }
+        }
+    },
+    capabilities = capabilities,
+}
+
+-- Functional
+lsp_conf.elixirls.setup {
+    cmd = { "/Users/amirgaripov/lsp-servers/elixir-ls/language_server.sh" },
+    capabilities = capabilities,
+}
+
+lsp_conf.marksman.setup {
     capabilities = capabilities
 }
