@@ -4,11 +4,12 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Scriptables
 lsp_conf.tsserver.setup {
-    capabilities = capabilities
+    capabilities = capabilities,
 }
 
 lsp_conf.pylsp.setup {
-    capabilities = capabilities
+    capabilities = capabilities,
+    autostart = false
 }
 
 lsp_conf.lua_ls.setup {
@@ -66,22 +67,27 @@ lsp_conf.cssls.setup {
 
 -- System langs
 lsp_conf.nim_langserver.setup {
+    autostart = false,
     capabilities = capabilities
 }
 
 lsp_conf.zls.setup {
+    autostart = false,
     capabilities = capabilities,
 }
 
 lsp_conf.clangd.setup {
+    autostart = false,
     capabilities = capabilities
 }
 
 lsp_conf.gopls.setup {
+    autostart = false,
     capabilities = capabilities,
 }
 
 lsp_conf.rust_analyzer.setup {
+    autostart = false,
     settings = {
         ['rust-analyzer'] = {
             diagnostics = {
@@ -94,10 +100,12 @@ lsp_conf.rust_analyzer.setup {
 
 -- Functional
 lsp_conf.elixirls.setup {
+    autostart = false,
     cmd = { "/Users/amirgaripov/lsp-servers/elixir-ls/language_server.sh" },
     capabilities = capabilities,
 }
 
 lsp_conf.marksman.setup {
+    autostart = false,
     capabilities = capabilities
 }

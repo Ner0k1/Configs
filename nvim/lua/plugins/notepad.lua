@@ -14,10 +14,10 @@ return {
                     border = "single",
                     title = "Note",
                     title_pos = "center",
-                    width = math.floor(0.9 * window_width),
-                    height = math.floor(0.85 * window_height),
+                    width = math.floor(0.7 * window_width),
+                    height = math.floor(0.70 * window_height),
                     row = math.floor(0.05 * window_height),
-                    col = math.floor(0.15 * window_width),
+                    col = math.floor(0.05 * window_width),
                 }
             end,
         })

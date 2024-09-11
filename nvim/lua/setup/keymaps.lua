@@ -20,6 +20,8 @@ km.set('n', '<leader>gi', builtin.lsp_implementations, { desc = "Go to Implement
 km.set({ 'n', 'v' }, '<leader>ca', ls.code_action, { desc = 'Code Actions' })
 km.set('n', '<leader>cr', ls.rename, { desc = 'Rename Var' })
 km.set('n', '<leader>cf', function() ls.format { async = true } end, { desc = 'Code Format' })
+km.set('n', '<leader>ls', "<CMD>LspStart<CR>", { desc = 'Start Lsp' })
+km.set('n', '<leader>lS', "<CMD>LspStop<CR>", {desc = 'Stop Lsp'})
 
 -- Workspace
 km.set('n', '<leader>wa', ls.add_workspace_folder, { desc = "Add Folder" })
@@ -30,7 +32,8 @@ km.set('n', '<leader>wl', function() print(vim.inspect(ls.list_workspace_folders
 km.set('n', '<leader>ng', tl.extensions.notify.notify, { desc = "Notify Grep" })
 
 -- ScratchPad
-km.set('n', '<leader>q', nt.toggle_note, {desc = "ScratchPad"})
+km.set('n', '<leader>q', nt.toggle_note, { desc = "ScratchPad" })
 
 -- Oil
-km.set('n', "<leader>fo", "<CMD>Oil<CR>", {desc = "Open Parent Dir"})
+km.set('n', "<leader>fo", "<CMD>Oil<CR>", { desc = "Open Parent Dir" })
+
